@@ -19,6 +19,31 @@ public Temp clone()
 }
 
 
+class Temp implements Cloneable
+{
+ int g;
+ Temp(int g)
+  {
+    this.g=g;
+  }
+public Temp clone()
+{
+  try
+  {
+	return (Temp)super.clone();
+  }
+  catch(Exception e)
+  {
+	return null;
+  }
+}
+}
+
+
+
+
+
+
 class DeepMyClone implements Cloneable
 {
 	int x=10;
